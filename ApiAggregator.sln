@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiAggregator", "ApiAggregator\ApiAggregator.csproj", "{FA09F012-D263-4B35-94A3-59AA90C2FD68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiAggregator.UnitTests", "ApiAggregator.UnitTests\ApiAggregator.UnitTests.csproj", "{FF255BA6-3E56-42B8-B906-E950D6CDF14E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA09F012-D263-4B35-94A3-59AA90C2FD68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA09F012-D263-4B35-94A3-59AA90C2FD68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA09F012-D263-4B35-94A3-59AA90C2FD68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA09F012-D263-4B35-94A3-59AA90C2FD68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF255BA6-3E56-42B8-B906-E950D6CDF14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF255BA6-3E56-42B8-B906-E950D6CDF14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF255BA6-3E56-42B8-B906-E950D6CDF14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF255BA6-3E56-42B8-B906-E950D6CDF14E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE145870-3B99-4D69-BD1C-97A7682C591B}
+	EndGlobalSection
+EndGlobal

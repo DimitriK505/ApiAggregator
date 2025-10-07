@@ -1,0 +1,79 @@
+## Ignore Visual Studio temporary files, build results, and
+## user-specific files
+
+# Build Folders
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code settings
+.vscode/
+
+# Visual Studio
+.vs/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.assets.json
+
+# Microsoft Azure Web App publish settings
+PublishProfiles/
+
+# IIS Express
+*.vspscc
+*.vssscc
+.vs/
+iisexpress/
+
+# Rider
+.idea/
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs
+*.log
+
+# Others
+*.dbmdl
+*.bak
+*.cache
+*.tmp
+
+# Coverage reports
+TestResults/
+*.coverage
+*.coveragexml
+*.testresults
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# npm packages
+node_modules/
+
+# dotenv environment files
+.env
+.env.*
