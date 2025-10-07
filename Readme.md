@@ -22,7 +22,7 @@
 Retrieve aggregated data from all configured sources.
 
 **Query Parameters:**
-- `filterOptions` – Filtering criteria (e.g., can be a news of a sports keyword).
+- `filterOptions` – Filtering criteria (e.g., can be a news or a sports keyword).
 - `sortingOptions` – Sorting criteria (e.g., by date or name, ascending/descending).
 
 ### `GET /Statistics`
