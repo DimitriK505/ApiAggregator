@@ -1,4 +1,4 @@
-﻿namespace ApiAggregator.Domain;
+﻿namespace ApiAggregator.Contracts;
 
 public class FilterOptions
 {

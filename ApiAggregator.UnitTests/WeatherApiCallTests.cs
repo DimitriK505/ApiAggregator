@@ -1,3 +1,4 @@
+using ApiAggregator.Contracts;
 using ApiAggregator.Domain;
 using FakeItEasy;
 using FluentAssertions;

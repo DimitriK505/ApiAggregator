@@ -1,4 +1,6 @@
-﻿namespace ApiAggregator.Domain;
+﻿using ApiAggregator.Contracts;
+
+namespace ApiAggregator.Domain;
 
 /// <summary>
 /// Provides functionality to aggregate data from multiple API endpoints, applying filtering and sorting options.

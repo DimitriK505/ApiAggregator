@@ -1,4 +1,6 @@
-﻿namespace ApiAggregator.Domain;
+﻿using ApiAggregator.Contracts;
+
+namespace ApiAggregator.Domain;
 
 public interface IApiCall
 {

@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace ApiAggregator.Domain;
+namespace ApiAggregator.Contracts;
 
 public class SortingOptions
 {

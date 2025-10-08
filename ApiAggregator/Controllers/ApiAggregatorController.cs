@@ -1,4 +1,5 @@
-﻿using ApiAggregator.Domain;
+﻿using ApiAggregator.Contracts;
+using ApiAggregator.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiAggregator.Controllers;
