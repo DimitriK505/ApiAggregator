@@ -52,8 +52,19 @@ public class WeatherApiCall : IApiCall
             response.EnsureSuccessStatusCode();
             var body = await response.Content.ReadAsStringAsync();
             stopwatch.Stop();
+
             _aggregatorStatisticsService.RecordApiCall(EndpointName, stopwatch.ElapsedMilliseconds);
             var json = JsonDocument.Parse(body);
+            if (body.Contains("\"source\":\"PollyFallback\""))
+            {
+                return new EndpointResult
+                {
+                    Name = EndpointName,
+                    IsSuccess = response.IsSuccessStatusCode,
+                    ResponseBody = json?.RootElement.GetProperty("message").GetString() ?? string.Empty,
+                    ErrorMessage = response?.ReasonPhrase?.Trim() ?? string.Empty
+                };
+            }
             var weatherDescription = json.RootElement.GetProperty("weather")[0].GetProperty("description").GetString();
             var temperature = json.RootElement.GetProperty("main").GetProperty("temp").GetDouble();
             body = $"Weather in Athens: {weatherDescription}, Temperature: {temperature:F2} °C";

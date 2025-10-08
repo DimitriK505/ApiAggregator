@@ -1,4 +1,5 @@
 ﻿using ApiAggregator.Contracts;
+using ApiAggregator.Domain.Models;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using System.Diagnostics;
@@ -135,30 +136,7 @@ namespace ApiAggregator.Domain
         private string GenerateCacheKey(FilterOptions filterOptions, SortingOptions sortingOptions)
         {
             return $"NewsCacheKey_{filterOptions.NewsKeyword}_{sortingOptions.SortBy}_{sortingOptions.SortOrder}";
-        }
-    }
-
-    public class NewsApiResponse
-    {
-        public string Status { get; set; }
-        public int TotalResults { get; set; }
-        public List<Article> Articles { get; set; }
-    }
-
-    public class Article
-    {
-        public Source Source { get; set; }
-        public string Author { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string Url { get; set; }
-        public string Content { get; set; }
-        public DateTime PublishedAt { get; set; }
-    }
-
-    public class Source
-    {
-        public string Id { get; set; }
-        public string Name { get; set; }
+        }        
     }
 }
+

@@ -19,7 +19,7 @@ builder.Services.AddHttpClient<ApiAggregatorService>()
 builder.Services.AddMemoryCache();
 builder.Services.AddScoped<IApiCall, WeatherApiCall>();
 builder.Services.AddScoped<IApiCall, NewsApiCall>();
-builder.Services.AddScoped<IApiCall, SportsNewsCall>();
+builder.Services.AddScoped<IApiCall, SportsNewsApiCall>();
 builder.Services.AddSingleton<IAggregatorStatisticsService, AggregatorStatisticsService>();
 builder.Services.Configure<EndpointSettings>(
     builder.Configuration.GetSection("EndpointSettings"));

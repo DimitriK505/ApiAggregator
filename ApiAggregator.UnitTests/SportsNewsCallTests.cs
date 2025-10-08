@@ -32,7 +32,7 @@ namespace ApiAggregator.UnitTests
             A.CallTo(() => cache.TryGetValue(A<object>._, out dummy)).Returns(false);
             var stats = A.Fake<IAggregatorStatisticsService>();
             var options = Options.Create(new EndpointSettings { SportsApiKey = "fake-key" });
-            var sportsNewsCall = new SportsNewsCall(options, cache, stats);
+            var sportsNewsCall = new SportsNewsApiCall(options, cache, stats);
             var filter = new FilterOptions { SportNewsKeyword = "" };
             var sorting = new SortingOptions { SortBy = SortBy.Date, SortOrder = SortOrder.Asc };
 
@@ -62,7 +62,7 @@ namespace ApiAggregator.UnitTests
             A.CallTo(() => cache.TryGetValue(A<object>._, out dummy)).Returns(false);
             var stats = A.Fake<IAggregatorStatisticsService>();
             var options = Options.Create(new EndpointSettings { SportsApiKey = "fake-key" });
-            var sportsNewsCall = new SportsNewsCall(options, cache, stats);
+            var sportsNewsCall = new SportsNewsApiCall(options, cache, stats);
             var filter = new FilterOptions { SportNewsKeyword = "" };
             var sorting = new SortingOptions { SortBy = SortBy.Date, SortOrder = SortOrder.Asc };
 
@@ -85,7 +85,7 @@ namespace ApiAggregator.UnitTests
             A.CallTo(() => cache.TryGetValue(A<object>._, out dummy)).Returns(false);
             var stats = A.Fake<IAggregatorStatisticsService>();
             var options = Options.Create(new EndpointSettings { SportsApiKey = "fake-key" });
-            var sportsNewsCall = new SportsNewsCall(options, cache, stats);
+            var sportsNewsCall = new SportsNewsApiCall(options, cache, stats);
             var filter = new FilterOptions { SportNewsKeyword = "" };
             var sorting = new SortingOptions { SortBy = SortBy.Date, SortOrder = SortOrder.Asc };
 
@@ -112,7 +112,7 @@ namespace ApiAggregator.UnitTests
             A.CallTo(() => cache.TryGetValue(A<object>._, out dummy)).Returns(false);
             var stats = A.Fake<IAggregatorStatisticsService>();
             var options = Options.Create(new EndpointSettings { SportsApiKey = "fake-key" });
-            var sportsNewsCall = new SportsNewsCall(options, cache, stats);
+            var sportsNewsCall = new SportsNewsApiCall(options, cache, stats);
             var filter = new FilterOptions { SportNewsKeyword = "" };
             var sorting = new SortingOptions { SortBy = SortBy.Date, SortOrder = SortOrder.Asc };
 

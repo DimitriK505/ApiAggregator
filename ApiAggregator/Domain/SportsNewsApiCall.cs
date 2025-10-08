@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using ApiAggregator.Contracts;
+using ApiAggregator.Domain.Models;
 
 namespace ApiAggregator.Domain;
 
@@ -16,13 +17,13 @@ namespace ApiAggregator.Domain;
 /// <remarks>This class is responsible for interacting with an external API to fetch match data, applying
 /// filtering and sorting options, and caching the results for improved performance. The cache duration is 15 minutes.
 /// Use this class to retrieve formatted match results based on specific criteria.</remarks>
-public class SportsNewsCall : IApiCall
+public class SportsNewsApiCall : IApiCall
 {
     public string EndpointName => "SportsNewsEndpoint";
     private readonly EndpointSettings _settings;
     private readonly IMemoryCache _cache;
     private readonly IAggregatorStatisticsService _aggregatorStatisticsService;
-    public SportsNewsCall(IOptions<EndpointSettings> settings, IMemoryCache cache, IAggregatorStatisticsService aggregatorStatisticsService)
+    public SportsNewsApiCall(IOptions<EndpointSettings> settings, IMemoryCache cache, IAggregatorStatisticsService aggregatorStatisticsService)
     {
         _settings = settings.Value;
         _cache = cache;
@@ -137,44 +138,4 @@ public class SportsNewsCall : IApiCall
     }
 }
 
-public class MatchResponse
-{
-    [JsonPropertyName("matches")]
-    public List<Match> Matches { get; set; }
-}
-
-public class Match
-{
-    [JsonPropertyName("utcDate")]
-    public DateTime UtcDate { get; set; }
-
-    [JsonPropertyName("homeTeam")]
-    public Team HomeTeam { get; set; }
-
-    [JsonPropertyName("awayTeam")]
-    public Team AwayTeam { get; set; }
-
-    [JsonPropertyName("score")]
-    public Score Score { get; set; }
-}
-
-public class Team
-{
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-public class Score
-{
-    [JsonPropertyName("fullTime")]
-    public FullTime FullTime { get; set; }
-}
-
-public class FullTime
-{
-    [JsonPropertyName("home")]
-    public int? Home { get; set; }
-
-    [JsonPropertyName("away")]
-    public int? Away { get; set; }
-}
+ 
