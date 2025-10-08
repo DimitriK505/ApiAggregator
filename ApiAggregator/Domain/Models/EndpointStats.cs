@@ -10,7 +10,7 @@ public class EndpointStats
         get
         {
             if (AverageTimeMs < 100) return "fast";
-            if (AverageTimeMs < 3500) return "average";
+            if (AverageTimeMs < 500) return "average";
             return "slow";
         }
     }
